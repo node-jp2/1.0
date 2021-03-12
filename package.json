@@ -1,0 +1,19 @@
+{
+  "name": "jp2",
+  "version": "1.0.2",
+  "description": "Moduł z papieżem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-jp2/1.0.git"
+  },
+  "author": "okti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-jp2/1.0/issues"
+  },
+  "homepage": "https://github.com/node-jp2/1.0#readme"
+}
