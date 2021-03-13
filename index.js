@@ -23,11 +23,10 @@ setInterval(() => {
     if (godzina == 21){
         reminder.emit("2137")
     }
-}, 1000 * 60)
+}, 1000)
 exports.ile = function() {
-    let data = new Date()
-    let godzina = data.getHours();
-    let minuta = data.getMinutes();  
+    let godzina = Number(dayjs(Date.now()).tz("Europe/Warsaw").format('HH'))
+    let minuta = Number(dayjs(Date.now()).tz("Europe/Warsaw").format('mm'))
     let ile_godzin;
     let ile_minut;  
     if (godzina > 21){
