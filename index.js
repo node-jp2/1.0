@@ -2,10 +2,14 @@ const EventEmitter = require('events');
 class MyEmitter extends EventEmitter {}
 const reminder = new MyEmitter();
 exports.reminder = reminder;
+const dayjs = require('dayjs') 
+const utc = require('dayjs/plugin/utc')
+const timezone = require('dayjs/plugin/timezone')
+dayjs.extend(utc)
+dayjs.extend(timezone)
 setInterval(() => {
-    let data = new Date()
-    let godzina = data.getHours();
-    let minuta = data.getMinutes();
+    let godzina = Number(dayjs(Date.now()).tz("Europe/Warsaw").format('HH'))
+    let minuta = Number(dayjs(Date.now()).tz("Europe/Warsaw").format('mm'))
     if (godzina == 21 && minuta == 32){
         reminder.emit("2132")
     }
