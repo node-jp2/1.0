@@ -39,6 +39,7 @@ exports.ile = function() {
 
     if (minuta > 37){
         ile_minut = 60 - Number(minuta) + 37;
+        ile_godzin = ile_godzin - 1;
     } else if (minuta == 37){
         ile_minut = 0;
     } else {
